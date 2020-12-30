@@ -82,6 +82,6 @@ public class CartController {
         if(num == null) return new ResponseEntity<>("Bad Request!", HttpStatus.BAD_REQUEST);
         cart.setNum(num);
         cartRepository.save(cart);
-        return new ResponseEntity(HttpStatus.OK);
+        return new ResponseEntity(cart, HttpStatus.OK);
     }
 }
